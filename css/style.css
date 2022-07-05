@@ -22,7 +22,8 @@ a{
 /* 
     Layout
 */
-.container{
+.container,
+.container-small{
     width: 100%;
 }
 .row{
@@ -63,6 +64,14 @@ a{
     color: #fff;
     background-color: #0084fd;
 }
+.button.lille{
+    color: #000;
+    background-color: #9792E4;
+}
+.cta-link.button.round{
+    border-radius: 50%;
+    padding: 0.8rem 1rem;
+}
 /* End Button */
 /* CTA Button */
 .cta-link{
@@ -95,19 +104,21 @@ a{
 .card.main-card .card-txt > *:not:last-child{
     flex-basis: 100%;
 }
-.card-txt{
+.card .card-txt{
     gap: 2.7rem;
     flex-wrap: wrap;
     flex-direction: row;
+}
+.card-desc{    
+    line-height: 26px;
 }
 .card-txt .card-title{
     width: 100%;
     font-size: 1.5rem;
     letter-spacing: -1px;
 }
-.card-txt .card-desc{
+.card .card-txt .card-desc{
     color: #000;
-    line-height: 26px;
 }
 .main-card .card-img{
     object-fit: cover;
@@ -162,8 +173,12 @@ a{
 
     Section > jumbo / hero
 */
+.section.jumbo{
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
 .section .container{
-    padding: 3rem 2rem 0;
+    padding: 0 2rem 0;
 }
 .jumbo .row{
     gap: 1.7rem;
@@ -182,7 +197,7 @@ a{
 }
 @media screen and (min-width: 1200px){
     .main-card .card-txt,
-    .main-card figure.col{
+    .main-card .card-figure{
         flex-basis: calc((100% - 2.7rem) / 2);
         flex-basis: calc((100% - 2.7rem) / 2);
     }
@@ -190,12 +205,85 @@ a{
         gap: 2rem;
         padding-bottom: 4rem;
     }
-    .main-card figure.col{
+    .main-card .card-figure{
         margin: -8px;
         justify-content: flex-end;
     }
     .main-card .card-img{
         max-width: 70%;
         align-self: center;
+    }
+}
+/* 
+    Section > Planning
+*/
+.section.planning{
+    padding: 4rem 0;
+    background-color: #9792E4;
+}
+.planning .container >.row{
+    gap: 2rem;
+}
+.row.strategic-plan .card-img{
+    padding-bottom: 5rem;
+}
+.row.strategic-plan .card-txt{
+    gap: 3rem;
+    color: #fff;
+}
+.row.strategic-plan .card-title{
+    font-size: 8vw;
+}
+.planning .app-development{
+    text-align: center;
+    border-radius: 3rem;
+    justify-content: center;
+    background-color: #fff;
+}
+.planning .app-development .card-txt{
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem 2rem;
+}
+.app-development .card-txt .card-title{
+    padding-bottom: 1.25rem;
+}
+.app-development .card-txt .card-desc{
+    padding-bottom: 2rem;
+}
+@media screen and (min-width: 810px){
+    .container-small{
+        margin: 0 auto;
+        max-width: 890px;
+    }
+}
+@media screen and (min-width: 1200px){
+    .planning .container-small > .row{
+        gap: 3rem;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+    }
+    .planning .container-small > .row > .col{
+        flex-basis: calc(100% / 2);
+    }
+    .planning .strategic-plan,
+    .planning .app-development{
+        flex-direction: column;
+    }
+    .app-development .card-figure{
+        align-items: center;
+    }
+    .row.strategic-plan .card-img{
+        padding-bottom: 8.5rem;
+    }
+    .row.app-development .card-img{
+        max-width: 80%;
+    }
+    .row.strategic-plan .card-title{
+        font-size: 2rem;
+    }
+    .row.strategic-plan .card-txt{
+        gap: 3.5rem;
+        padding: 0 2.5rem;
     }
 }
