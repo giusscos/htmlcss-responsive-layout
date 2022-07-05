@@ -217,11 +217,14 @@ a{
 /* 
     Section > Planning
 */
+.section .container-small{
+    padding: 0 2rem 0;
+}
 .section.planning{
     padding: 4rem 0;
     background-color: #9792E4;
 }
-.planning .container >.row{
+.planning .container-small >.row{
     gap: 2rem;
 }
 .row.strategic-plan .card-img{
