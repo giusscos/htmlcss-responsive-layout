@@ -542,3 +542,24 @@ a{
         margin: 0 auto;
     }
 }
+/* 
+    Footer
+
+    footer credit
+*/
+.main-footer{
+    color: #fff;
+    text-align: center;
+    padding: 2.1rem 2rem;
+    background-color: #333;
+}
+.section-footer .footer-desc{
+    padding-bottom: 4rem;
+}
+.section-footer p{
+    line-height: 26px;
+}
+.section-footer .footer-credit{
+    color: #9792E4;
+    text-decoration: 2px underline;
+}
