@@ -37,6 +37,10 @@ a{
 /* 
     Components
 */
+/* Text transform */
+.upcase{
+    text-transform: uppercase;
+}
 /* Burger Show Menu */
 .burger-line{
     gap: 4px;
@@ -83,7 +87,7 @@ a{
     padding: 0 3rem;
 }
 /* End CTA Button */
-/* Card */
+/* Card Jumbo */
 .card{
     color: #0084fd;
     text-align: center;
@@ -130,7 +134,38 @@ a{
 .card-icon i{
     font-size: 68px;
 }
-/* End Card */
+/* End Card Jumbo */
+/* Card Testimonials */
+.testimonials .card{
+    padding: 2rem 1rem 1rem;
+    border-radius: 3rem;
+    color: #fff;
+    background-color: #9792E4;
+}
+.testimonials .card > .row{
+    gap: 1rem;
+    justify-content: center;
+}
+.testimonials .card .card-figure{
+    padding: 0 2rem;
+    align-items: center;
+}
+.testimonials .card .card-img{
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-position: center;
+}
+.testimonials .card .card-quote{
+    font-size: 1.25rem;
+}
+.testimonials .card .quote{
+    line-height: 2rem;
+}
+.quote-author{
+    font-weight: bold;
+}
+/* End Card Testimonials */
 /* 
     Header
 */
@@ -287,6 +322,49 @@ a{
     }
     .row.strategic-plan .card-txt{
         gap: 3.5rem;
-        padding: 0 2.5rem;
+    }
+}
+/* 
+    Section > Testimonials
+*/
+.section.testimonials{
+    padding: 4rem 0 7rem;
+}
+.testimonials .container > .row:first-of-type {
+    padding-bottom: 3rem;
+}
+.testimonials .section-title{
+    gap: 2.5rem;
+    align-items: center;
+    text-align: center;
+}
+.testimonials .section-title .title-small{
+   font-size: 1.1rem;
+}
+.testimonials .section-title .title{
+    color: #9792E4;
+    font-size: 2rem;
+}
+.testimonials .section-title .sub-title{
+    line-height: 26px;
+}
+.testimonials .container > .row:last-child{
+    gap: 2rem;
+}
+@media screen and (min-width: 810px){
+    .testimonials .card > .row{
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+    }
+    .testimonials .card .card-figure{
+        padding: 0;
+        width: 400px;
+    }
+    .testimonials .card .card-quote{
+        gap: 2rem;
+        text-align: left;
+        padding: 0 2rem;
+        align-items: flex-start;
+        justify-content: center;
     }
 }
