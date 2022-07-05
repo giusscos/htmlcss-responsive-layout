@@ -36,6 +36,7 @@ a{
 /* 
     Components
 */
+/* Burger Show Menu */
 .burger-line{
     gap: 4px;
     width: 20px;
@@ -47,6 +48,8 @@ a{
     max-width: 100%;
     background-color: #fff;
 }
+/* End Burger Show Menu */
+/* Button */
 .button{
     padding: 0 1rem;
     line-height: 2.5rem;
@@ -56,12 +59,73 @@ a{
     color: #000;
     background-color: #fff;
 }
+.button.blue{
+    color: #fff;
+    background-color: #0084fd;
+}
+/* End Button */
+/* CTA Button */
+.cta-link{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+.cta-link.button{
+    padding: 0 3rem;
+}
+/* End CTA Button */
+/* Card */
+.card{
+    color: #0084fd;
+    text-align: center;
+    border-radius: 1.5rem;
+    padding: 2.5rem 2rem 0;
+    background-color: #B5DDFF;
+}
+.card.main-card{
+    text-align: left;
+}
+.card > .row{
+    gap: 1.65rem;
+    padding-bottom: 2.3rem;
+}
+.card.main-card > .row{
+    padding-bottom: 0;
+}
+.card.main-card .card-txt > *:not:last-child{
+    flex-basis: 100%;
+}
+.card-txt{
+    gap: 2.7rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.card-txt .card-title{
+    width: 100%;
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+}
+.card-txt .card-desc{
+    color: #000;
+    line-height: 26px;
+}
+.main-card .card-img{
+    object-fit: cover;
+    object-position: bottom center;
+}
+.card-icon{
+    width: 100%;
+}
+.card-icon i{
+    font-size: 68px;
+}
+/* End Card */
 /* 
     Header
 */
 .main-header{
     padding: 1rem 1.75rem;
-    background-color: #0084FD;
+    background-color: #0084fd;
 }
 .main-header .nav-header{
     display: none;
@@ -90,6 +154,48 @@ a{
     }
     .nav-header .list-item{
         font-size: 18px;
-        letter-spacing: -3%;
+        letter-spacing: -0.5px;
+    }
+}
+/* 
+    Main
+
+    Section > jumbo / hero
+*/
+.section .container{
+    padding: 3rem 2rem 0;
+}
+.jumbo .row{
+    gap: 1.7rem;
+}
+@media screen and (min-width: 810px){
+    .jumbo .row .card{
+        flex-basis: calc((100% - 3.4rem) / 3);
+    }
+    .jumbo .row .main-card{
+        flex-grow: 1;
+        flex-basis: calc((200% - 1.7rem) / 3);
+    }
+    .main-card .card-img{
+        max-width: 50%;
+    }
+}
+@media screen and (min-width: 1200px){
+    .main-card .card-txt,
+    .main-card figure.col{
+        flex-basis: calc((100% - 2.7rem) / 2);
+        flex-basis: calc((100% - 2.7rem) / 2);
+    }
+    .main-card .card-txt{
+        gap: 2rem;
+        padding-bottom: 4rem;
+    }
+    .main-card figure.col{
+        margin: -8px;
+        justify-content: flex-end;
+    }
+    .main-card .card-img{
+        max-width: 70%;
+        align-self: center;
     }
 }
