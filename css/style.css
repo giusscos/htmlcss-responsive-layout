@@ -76,6 +76,12 @@ a{
     border-radius: 50%;
     padding: 0.8rem 1rem;
 }
+.cta-link.button.round.small{
+    color: #fff;
+    padding: 0 3rem;
+    line-height: 2.4rem;
+    border-radius: 1.3rem;
+}
 /* End Button */
 /* CTA Button */
 .cta-link{
@@ -182,12 +188,6 @@ a{
     gap: 1.5rem;
     text-align: left;
     align-items: flex-start;
-}
-.benefits .card .cta .button{
-    color: #fff;
-    padding: 0 3rem;
-    line-height: 3rem;
-    border-radius: 1.3rem;
 }
 /* End Card Benefits */
 /* 
@@ -365,7 +365,7 @@ a{
 .testimonials .section-title .title-small{
    font-size: 1.1rem;
 }
-.testimonials .section-title .title{
+.section-title .title{
     color: #9792E4;
 }
 .section-title .title{
@@ -422,5 +422,70 @@ a{
 @media screen and (min-width: 1200px){
     .benefits .container .row .card{
         flex-basis: calc((100% - 4rem) / 3);
+    }
+}
+/* 
+    Section > About
+*/
+.section.about{
+    padding: 4.5rem 0 5rem;
+}
+.about .container > .row{
+    gap: 3.5rem;
+}
+.about .section-title{
+    gap: 3.2rem;
+}
+.about .section-title .title{
+    font-size: 2.5rem;
+}
+.about .desc{
+    line-height: 26px;
+}
+.about .section-profile{
+    gap: 1.7rem;
+    align-items: flex-start;
+}
+.about .section-profile .desc{
+    color: #9792E4;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.section-profile .section-img{
+    width: 200px;
+    position: relative;
+}
+.section-profile .section-img .img{
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-position: center;
+}
+.section-profile .section-img .decoration{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #9792E4;
+}
+.section-profile .section-img .decoration i{
+    font-size: 4.2rem;
+}
+.section-profile .cta-link.button.round.small{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+@media screen and (min-width: 810px){
+    .about .container .row{
+        justify-content: center;
+    }
+    .about .container .row > .col{
+        flex-basis: calc((200% - 3.5rem) / 4);
+    }
+    .about .container .row .section-profile{
+        flex-basis: calc((100% - 3.5rem) / 4);
+    }
+    .section-title .desc{
+        font-size: 1.2rem;
+        line-height: 30px;
     }
 }
